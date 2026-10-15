@@ -1,9 +1,33 @@
+
 {
-  "source": "/assets/index-B57Gz_A7.js",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "headers": [
     {
-      "key": "Cache-Control",
-      "value": "public, max-age=31536000, immutable"
+      "source": "/assets/index-B57Gz_A7.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)-[A-Za-z0-9_-]{8,}\\.(js|css|svg|png|jpg|jpeg|gif|webp|ico|woff|woff2|ttf|eot|mjs)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(html|json)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
   ]
 }
